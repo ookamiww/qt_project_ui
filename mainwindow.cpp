@@ -13,7 +13,7 @@ MainWindow::~MainWindow()
 {
     delete ui;
     delete topWidget;
-
+    delete mainLayout;
     delete player;
     delete videoWidget;
     delete list;
@@ -34,6 +34,15 @@ void MainWindow::initWindow()
     videoWidget = new QVideoWidget();
     player->setVideoOutput(videoWidget);
 
+    mainLayout = new QGridLayout(ui->centralWidget);
+    mainLayout->addWidget(videoWidget,1,2,5,2,Qt::AlignCenter);
+
+    mainLayout->setColumnStretch(0,13);
+    mainLayout->setColumnStretch(1,23);
+    mainLayout->setColumnStretch(6,13);
+    mainLayout->setRowStretch(0,5);
+    mainLayout->setRowStretch(1,20);
+    mainLayout->setRowStretch(2,2);
 
 }
 

@@ -10,6 +10,7 @@
 #include <QVideoWidget>
 #include <QDir>
 #include <QFileInfo>
+#include <QGridLayout>
 
 
 namespace Ui {
@@ -32,7 +33,7 @@ private:
     QMediaPlaylist *list;
     QMediaPlayer::State playerStatus;
     QVideoWidget *videoWidget;
-    QLayout *centerLayout;
+    QGridLayout *mainLayout;
 
     void initWindow();
     void addPlayList();
