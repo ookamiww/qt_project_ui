@@ -8,6 +8,8 @@
 #include <QMediaPlayer>
 #include <QMediaPlaylist>
 #include <QVideoWidget>
+#include <QDir>
+#include <QFileInfo>
 
 
 namespace Ui {
@@ -28,11 +30,13 @@ private:
     QWidget *topWidget;
     QMediaPlayer *player;
     QMediaPlaylist *list;
+    QMediaPlayer::State playerStatus;
     QVideoWidget *videoWidget;
     QLayout *centerLayout;
 
     void initWindow();
     void addPlayList();
+    void playVideo();
 
 };
 
